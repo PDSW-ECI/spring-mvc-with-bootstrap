@@ -2,6 +2,8 @@ package co.edu.escuelaing.cvds.lab7;
 
 import co.edu.escuelaing.cvds.lab7.model.Configuration;
 import co.edu.escuelaing.cvds.lab7.service.ConfigurationService;
+import co.edu.escuelaing.cvds.lab7.service.ToDoService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -11,7 +13,8 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class Lab7Application {
 	@Autowired
-	ConfigurationService configurationService;
+	ToDoService todoService;
+	//ConfigurationService configurationService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(Lab7Application.class, args);
@@ -21,11 +24,11 @@ public class Lab7Application {
 	public CommandLineRunner run() throws Exception {
 		return (args) -> {
 
-			System.out.println("Adding Configurations....");
-			configurationService.addConfiguration(new Configuration("premio", "800000"));
+			//System.out.println("Adding Configurations....");
+			//configurationService.addConfiguration(new Configuration("premio", "800000"));
 
-			System.out.println("\nGetting all configurations....");
-			configurationService.getAllConfigurations().forEach(configuration -> System.out.println(configuration));
+			//System.out.println("\nGetting all configurations....");
+			//configurationService.getAllConfigurations().forEach(configuration -> System.out.println(configuration));
 		};
 	}
 
