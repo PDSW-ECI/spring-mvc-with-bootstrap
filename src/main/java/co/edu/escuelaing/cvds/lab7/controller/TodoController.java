@@ -16,7 +16,7 @@ public class TodoController {
 
     @GetMapping("/")
     public String example(Model model) {
-        model.addAttribute("premio", toDoService.getItem(1));
+        model.addAttribute("toDoItem", toDoService.getItem(1));
         return "to-do-item";
     }
 
