@@ -32,7 +32,7 @@ public class GreetingController {
             
         List<ToDoItem> verdaderos= new ArrayList<>();
         for(int i =0; i<=200 ; i++){
-            ToDoItem toDoItem = toDoService.getItem(id);
+            ToDoItem toDoItem = toDoService.getItem(i);
              if(toDoItem.getCompleted()){
                 verdaderos.add(toDoItem);
              }else{ falsos.add(toDoItem);}  
