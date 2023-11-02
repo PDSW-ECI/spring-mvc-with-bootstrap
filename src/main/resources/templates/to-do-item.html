@@ -32,6 +32,25 @@
             </tbody>
 
         </table>
+        <table class="table table-info">
+            <thead>
+            <tr>
+                <th scope="col">Property</th>
+                <th scope="col">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Completados</th>
+                <td><p th:text="${arrayV}"/></td>
+            </tr>
+            <tr>
+                <th scope="row">Sin completar</th>
+                <td><p th:text="${arrayF}"/></td>
+            </tr>
+            </tbody>
+
+        </table>
     </div>
 </main>
 <footer th:replace="fragments/general::empty-footer"></footer>
