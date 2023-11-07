@@ -1,9 +1,25 @@
 package co.edu.escuelaing.cvds.lab7.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "TODOITEM")
 public class ToDoItem {
+
+    @Id
+    @Column(name = "ID")
     private Integer id;
+
+    @Column(name = "USER_ID")
     private Integer userId;
+
+    @Column(name = "TITLE")
     private String title;
+
+    @Column(name = "COMPLETED")
     private Boolean completed;
 
     public ToDoItem() {
@@ -46,5 +62,15 @@ public class ToDoItem {
 
     public boolean getCompleted(){
         return completed;
+    }
+
+    @Override
+    public String toString() {
+        return "ToDoItem{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", title='" + title + '\'' +
+                ", completed=" + completed +
+                '}';
     }
 }

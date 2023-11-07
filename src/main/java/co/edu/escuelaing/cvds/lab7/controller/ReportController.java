@@ -9,16 +9,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.client.RestTemplate;
 
 @Controller
-public class GreetingController {
+public class ReportController {
     @Autowired
     ToDoService toDoService;
 
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
-        return "greeting";
+    @RequestMapping("/report")
+    public String getToDoItem(Model model) {
+        Integer completed = toDoService.getCompleted();
+        Integer notCompleted = toDoService.getNotCompleted();
+        model.addAttribute("completed", completed);
+        model.addAttribute("notCompleted", notCompleted);
+        return "report";
     }
 }

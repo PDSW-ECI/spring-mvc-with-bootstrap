@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="fragments/general.html::headerfiles('Example Page')"></th:block>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var completed = Number(document.getElementById("completed").value);
+      console.log("completed: " + completed);
+      var notCompleted = Number(document.getElementById("notCompleted").value);
+      console.log("notCompleted: " + notCompleted);
+
+      var data = google.visualization.arrayToDataTable([
+        ['Estado de la Tarea', '# Tareas'],
+        ['Completadas',     completed],
+        ['No Completadas',      notCompleted]
+      ]);
+
+      var options = {
+        title: 'My Daily Activities'
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+      chart.draw(data, options);
+    }
+
+    function activatePie() {
+        document.getElementById('piechart').style.display = 'block';
+        document.getElementById('tablechart').style.display = 'none';
+    }
+
+    function activateTable() {
+        document.getElementById('tablechart').style.display = 'block';
+        document.getElementById('piechart').style.display = 'none';
+    }
+</script>
+
+<body>
+<main>
+    <h2 class="display-6 text-center mb-4">Reporte</h2>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary" onclick="activatePie()">Pie</button>
+                    <button type="button" class="btn btn-primary" onclick="activateTable()">Table</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" id="completed" th:value="${completed}"/>
+    <input type="hidden" id="notCompleted" th:value="${notCompleted}"/>
+    <div id="tablechart" class="table-responsive" style="display:none;">
+        <table class="table table-info">
+            <thead>
+            <tr>
+                <th scope="col">Estado de la tarea</th>
+                <th scope="col">Número de tareas</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Completadas:</th>
+                <td><p th:text="${completed}"/></td>
+            </tr>
+            <tr>
+                <th scope="row">No Completadas</th>
+                <td><p th:text="${notCompleted}"/></td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <div id="piechart" style="width: 900px; height: 500px; display:none;"></div>
+</main>
+<footer th:replace="fragments/general::empty-footer"></footer>
+</body>
+</html>
