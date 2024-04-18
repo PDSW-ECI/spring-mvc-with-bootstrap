@@ -37,7 +37,7 @@ public class EmployeeService {
     }
 
     public String getName(){
-        return employeeRepository.findByIdEmployees("1").get(0).getFirstName();
+        return employeeRepository.findByEmployeeId("1").get(0).getFirstName();
     }
     
 }
