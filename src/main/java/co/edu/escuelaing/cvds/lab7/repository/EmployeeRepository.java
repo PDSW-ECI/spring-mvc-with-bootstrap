@@ -13,5 +13,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, String> {
-    public List<Employee> findByIdEmployees(String Id);
+    public List<Employee> findByEmployeeId(String Id);
 }
