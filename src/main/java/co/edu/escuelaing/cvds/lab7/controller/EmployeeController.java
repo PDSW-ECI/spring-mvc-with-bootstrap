@@ -29,7 +29,7 @@ public class EmployeeController {
         for (Employee e : employees){
             System.out.println(e.toString());
         }
-        return "toIndex";
+        return "toIndex"; //aqui debemos cambiarlo si queremos.
     }
 
     @GetMapping("/create")

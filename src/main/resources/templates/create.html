@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear</title>
+</head>
+
+<body>
+    <h1>Formulario para Capturar Información de Empleado</h1>
+    
+    <form action="/guardarEmpleado" method="POST">
+        <label for="employeeId">ID de Empleado:</label><br>
+        <input type="text" id="employeeId" name="employeeId"><br>
+
+        <label for="firstName">Nombre:</label><br>
+        <input type="text" id="firstName" name="firstName"><br>
+
+        <label for="lastName">Apellido:</label><br>
+        <input type="text" id="lastName" name="lastName"><br>
+
+        <label for="role">Rol:</label><br>
+        <input type="text" id="role" name="role"><br>
+
+        <label for="salary">Salario:</label><br>
+        <input type="text" id="salary" name="salary"><br>
+
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+
+</html>
