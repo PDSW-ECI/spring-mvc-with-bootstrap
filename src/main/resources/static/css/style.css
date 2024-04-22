@@ -1,0 +1,43 @@
+.container {
+    margin: 0 auto; /* Centra el contenido */
+    max-width: 600px; /* Máximo ancho del contenedor */
+    padding: 20px; /* Espacio interno */
+    text-align: left; /* Alineación de texto */
+}
+
+.title {
+    text-align: center; /* Centra el título */
+    color: #333; /* Color del texto */
+}
+
+.rows {
+    margin-bottom: 10px; /* Espacio entre filas */
+}
+
+.boxes {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espacio interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+.boxes:focus {
+    outline: none; /* Quita el borde azul por defecto */
+    border-color: #007bff; /* Color del borde al estar en foco */
+    background-color: #f0f8ff; /* Color de fondo al estar en foco */
+}
+
+.links {
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Color del texto */
+    background-color: #007bff; /* Color de fondo */
+    padding: 10px 20px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar */
+    margin: 20px;
+}
+
+.links:hover {
+    background-color: #0056b3; /* Color al pasar */
+}

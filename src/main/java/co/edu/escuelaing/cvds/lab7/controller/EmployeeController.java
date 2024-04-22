@@ -31,7 +31,7 @@ public class EmployeeController {
         }
         return "list"; //aqui debemos cambiarlo si queremos.
     }
-
+    
     @GetMapping("/create")
     public String createEmployee(Model model){
         model.addAttribute("employees",new Employee());
@@ -63,4 +63,5 @@ public class EmployeeController {
         employeeService.addEmployee(new Employee(idEmployee, firstName, lastName, role, salary));
         return "redirect:/employee/toList";
     }
+
 }
