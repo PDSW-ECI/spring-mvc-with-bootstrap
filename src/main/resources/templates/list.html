@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Empleados</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style1.css">
+</head>
+<body>
+    <div class="container"> 
+        <h1>Lista de Empleados</h1>
+        <table class="employee-table"> 
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Rol</th>
+                    <th>Salario</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="employee : ${employees}">
+                    <td th:text="${employee.employeeId}"></td>
+                    <td th:text="${employee.firstName}"></td>
+                    <td th:text="${employee.lastName}"></td>
+                    <td th:text="${employee.role}"></td>
+                    <td th:text="${employee.salary}"></td>
+                    <td>
+                        <a class="links" th:href="@{/employee/delete/{id}(id=${employee.employeeId})}">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="actions">
+            <a class="links" href="/employee/create">Crear Empleado</a> 
+        </div>
+    </div>  
+</body>
+</html>

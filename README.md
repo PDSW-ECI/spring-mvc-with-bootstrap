@@ -4,3 +4,9 @@
 
 ## Structure Directory
 https://studygyaan.com/spring-boot/spring-boot-project-folder-structure-and-best-practices
+
+
+## HECHO POR:
+## LAURA VALENTINA RODRIGUEZ, JUAN PABLO FERNANDEZ
+
+## EL proyecto realizado esta en la rama juanito

@@ -1,0 +1,79 @@
+/* Estilo para la estructura principal de la página */
+body {
+    font-family: Arial, sans-serif; /* Fuente para el texto */
+    background-color: #f9f9f9; /* Color de fondo de la página */
+    color: #333; /* Color del texto */
+    margin: 0; /* Sin margen en el cuerpo */
+    padding: 0; /* Sin relleno en el cuerpo */
+}
+
+/* Estilo para el contenedor principal */
+.container {
+    max-width: 1000px; /* Ancho máximo del contenedor */
+    margin: 30px auto; /* Centra el contenedor */
+    padding: 20px; /* Espacio interno */
+    background-color: white; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilo para el título */
+h1 {
+    text-align: center; /* Centra el título */
+    font-size: 2em; /* Tamaño de fuente */
+    color: #007bff; /* Color azul */
+}
+
+/* Estilo para la tabla */
+.employee-table {
+    width: 100%; /* Tabla ocupa todo el ancho */
+    border-collapse: collapse; /* Sin espacio entre celdas */
+    margin-top: 20px; /* Espacio arriba de la tabla */
+}
+
+/* Estilo para las celdas de la tabla */
+.employee-table th, .employee-table td {
+    border: 1px solid #ddd; /* Bordes de las celdas */
+    padding: 10px; /* Espacio interno */
+    text-align: center; /* Alinea el texto */
+}
+
+/* Estilo para las cabeceras de la tabla */
+.employee-table th {
+    background-color: #f2f2f2; /* Color de fondo */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilo para las filas de la tabla */
+.employee-table tr:hover {
+    background-color: #f5f5f5; /* Color al pasar */
+}
+
+/* Estilo para la sección de acciones */
+.actions {
+    text-align: center; /* Centra las acciones */
+    margin-top: 20px; /* Espacio antes de las acciones */
+}
+
+/* Estilo para los enlaces */
+.links {
+    color: #007bff; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 20px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #e0e0e0; /* Fondo del enlace */
+    border: 1px solid #007bff; /* Borde del enlace */
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+/* Estilo para el efecto hover en los enlaces */
+.links:hover {
+    background-color: #007bff; /* Color de fondo al pasar */
+    color: white; /* Color del texto al pasar */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilo para el espaciado entre enlaces */
+.actions .links {
+    margin: 10px; /* Margen entre enlaces */
+}

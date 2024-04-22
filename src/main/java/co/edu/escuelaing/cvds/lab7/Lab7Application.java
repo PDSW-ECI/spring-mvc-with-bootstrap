@@ -3,8 +3,10 @@ package co.edu.escuelaing.cvds.lab7;
 import co.edu.escuelaing.cvds.lab7.model.Configuration;
 import co.edu.escuelaing.cvds.lab7.model.User;
 import co.edu.escuelaing.cvds.lab7.model.UserRole;
+import co.edu.escuelaing.cvds.lab7.repository.EmployeeRepository;
 import co.edu.escuelaing.cvds.lab7.repository.UserRepository;
 import co.edu.escuelaing.cvds.lab7.service.ConfigurationService;
+import co.edu.escuelaing.cvds.lab7.service.EmployeeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -19,16 +21,19 @@ import java.util.Arrays;
 @Slf4j
 public class Lab7Application {
 	private final ConfigurationService configurationService;
-
+	private final EmployeeService employeeService;
 	private final UserRepository userRepository;
 
 	@Autowired
 	public Lab7Application(
 			ConfigurationService configurationService,
-			UserRepository userRepository
+			UserRepository userRepository,
+			EmployeeService employeeService
+			
 	) {
 		this.configurationService = configurationService;
 		this.userRepository = userRepository;
+		this.employeeService = employeeService;
 	}
 
 	public static void main(String[] args) {
@@ -38,7 +43,7 @@ public class Lab7Application {
 	@Bean
 	public CommandLineRunner run() {
 		return (args) -> {
-			log.info("Adding Configurations....");
+			/*log.info("Adding Configurations....");
 			configurationService.addConfiguration(new Configuration("premio", "810000"));
 			configurationService.addConfiguration(new Configuration("descuento", "0.1"));
 			configurationService.addConfiguration(new Configuration("app-name", "Miraculous: Las Aventuras de Ladybug"));
@@ -48,6 +53,7 @@ public class Lab7Application {
 
 			log.info("\nAdding admin@site.org user with Password: admin");
 			userRepository.save(new User("admin@site.org", "admin", Arrays.asList(UserRole.ADMINISTRADOR, UserRole.CLIENTE)));
+			*/
 		};
 	}
 
